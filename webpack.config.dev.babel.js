@@ -4,6 +4,7 @@ import path from 'path';
 
 /**
  * Development webpack config designed to be loaded by express development server
+ * Purpose of webpack is to bundle our JS into a single file that a browser can understand
  */
 
 module.exports = {

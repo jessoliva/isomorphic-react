@@ -6,7 +6,9 @@ import fetch from 'isomorphic-fetch';
  *  The module, isomorphic fetch, is conveniently mocked automatically be including the file __mocks__/isomorphic-fetch.js adjacent to to the Node.js folder
  * 2) we're using an async function to automatically deal with the fact that our app isn't synchronous
  */
-describe("Fetch questions saga",()=>{
+describe("Fetch questions saga",() => {
+
+    // this is from the __mocks__/isomorphic-fetch.js file
     beforeAll(()=>{
         fetch.__setValue([{question_id:42}]);
     });
@@ -22,6 +24,7 @@ describe("Fetch questions saga",()=>{
         /**
          * We can also assert that fetch has been called with the values expected (note that we used a spy in the file where we mock fetch.)
          */
+        // a spy
         expect(fetch).toHaveBeenCalledWith(`/api/questions/42`);
     });
 });

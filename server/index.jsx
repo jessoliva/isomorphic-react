@@ -16,6 +16,10 @@ import { Provider } from 'react-redux';
 import createHistory from 'history/createMemoryHistory';
 
 /**
+ * calling it .jsx to let other developers know that this file contains React code
+ */
+
+/**
  * Try and find a specific port as provided by an external cloud host, or go with a default value
  */
 const port = process.env.PORT || 3000;
